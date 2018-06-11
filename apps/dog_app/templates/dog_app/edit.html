@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/update/{{ dog.id }}" method="post">
+            {% csrf_token %}
+            <label>Name:<input type="text" name="name" value="{{dog.name}}"></label>
+            <label>Breed:<input type="text" name="breed" value="{{dog.breed}}"></label>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</body>
+</html>
